@@ -1,0 +1,7 @@
+{
+    "token": "997225645:AAGT8F9OHSzDueD-YQmHQ7jGhM22sP8OaNA",
+    "doge_price_chart": "https://api.coingecko.com/api/v3/coins/dogecoin/market_chart?vs_currency=usd&days=1",
+    "doge_in_uah": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=uah&ids=dogecoin&sparkline=false",
+    "doge_in_rub": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=rub&ids=dogecoin&sparkline=false",
+    "doge_in_usd": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=dogecoin&sparkline=false"
+}
