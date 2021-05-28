@@ -20,7 +20,7 @@ module.exports = async (ctx, num, uah, usd, rub) => {
         `${num} doge → rub: ${rub_price * num}₽ \n` +
         `${num} doge → uah: ${uah_price * num}₴ \n` +
         `${num} doge → usd: ${usd_price * num}$ \n` +
-        '➖➖➖➖➖➖➖➖➖➖➖➖➖\n'
+        '➖➖➖➖➖➖➖➖➖➖➖➖➖\n' +
         `Price change \n` +
         `1hour:    ${price_change_1h<0 ? '🔴' : '🟢'}${Math.abs(price_change_1h).toFixed(3)}% \n` +
         `1day:      ${price_change_24h<0 ? '🔴' : '🟢'}${Math.abs(price_change_24h).toFixed(3)}% \n` +
