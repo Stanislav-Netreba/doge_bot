@@ -51,9 +51,16 @@ module.exports = async (ctx, chart) =>{
         
         await func()
 
-        await ctx.replyWithPhoto({
+        let a = await ctx.replyWithPhoto({
             source: `./images/${unix}_c.png`
         });
+
+        
+        let st = setTimeout(() => {
+            ctx.deleteMessage(ctx.message_id);
+            ctx.deleteMessage(a.message_id);
+        }, 60*1e3);  
+        
 
         fs.unlinkSync(`./images/${unix}_c.png`)
     });
