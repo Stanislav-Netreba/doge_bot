@@ -7,6 +7,7 @@ const bot = new Telegraf(process.env.TOKEN);
 //functions
 
 const chart = require('./functions/chart.js');
+const help = require('./functions/help.js');
 const doge_price = require('./functions/price.js')
 
 //
@@ -17,6 +18,7 @@ const rub = config.doge_in_rub;
 
 
 bot.on('message', ctx => {
+    console.log('text')
     let command = ctx.message.text
     if(!command) return;
     cmdList = command.split(/\s+/g);
@@ -25,7 +27,9 @@ bot.on('message', ctx => {
         let num = +cmdList[1] || 1;
         doge_price(ctx, num, uah, usd, rub)
     };
-
+    if(cmdList[0].toLowerCase() == 'help'){
+        help(bot, ctx);
+    };
     if(cmdList[0].toLowerCase() == 'chart') {
         chart(ctx, config.doge_price_chart);
     };
