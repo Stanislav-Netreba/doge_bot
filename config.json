@@ -1,6 +1,6 @@
 {    
 	"doge_price_chart": "https://api.coingecko.com/api/v3/coins/dogecoin/market_chart?vs_currency=usd&days=1",
-    "doge_in_uah": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=uah&ids=dogecoin&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,1y",
-    "doge_in_rub": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=rub&ids=dogecoin&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,1y",
-    "doge_in_usd": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=dogecoin&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,1y"
+	"doge_in_uah": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=uah&ids=dogecoin&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,1y",
+	"doge_in_rub": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=rub&ids=dogecoin&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,1y",
+	"doge_in_usd": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=dogecoin&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,1y"
 }
