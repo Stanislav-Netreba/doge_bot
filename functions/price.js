@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+﻿const fetch = require("node-fetch");
 
 module.exports = async (ctx, num, uah, usd, rub) => {
     const [
@@ -17,9 +17,9 @@ module.exports = async (ctx, num, uah, usd, rub) => {
 
 
     const sentMsg = await ctx.reply(
-        `${num} doge → rub: ${rub_price * num}₽ \n` +
-        `${num} doge → uah: ${uah_price * num}₴ \n` +
-        `${num} doge → usd: ${usd_price * num}$ \n` +
+        `${num} doge → rub: ${(rub_price * num).toFixed(3)}₽ \n` +
+        `${num} doge → uah: ${(uah_price * num).toFixed(3)}₴ \n` +
+        `${num} doge → usd: ${(usd_price * num).toFixed(3)}$ \n` +
         '➖➖➖➖➖➖➖➖➖➖➖➖➖\n' +
         `Price change \n` +
         `1hour:    ${price_change_1h<0 ? '🔴' : '🟢'}${Math.abs(price_change_1h).toFixed(3)}% \n` +

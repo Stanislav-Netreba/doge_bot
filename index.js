@@ -33,5 +33,9 @@ bot.on('message', ctx => {
     if(cmdList[0].toLowerCase() == 'chart') {
         chart(ctx, config.doge_price_chart);
     };
+    if(ctx.message.text == 'time'){
+        ctx.reply(new Date())
+
+    }
 });
 bot.launch();
