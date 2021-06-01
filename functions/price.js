@@ -31,7 +31,7 @@ module.exports = async (ctx, num, uah, usd, rub) => {
     );
 
     setTimeout(() => {
-        ctx.deleteMessage(ctx.message_id);
+        ctx.message_id && ctx.deleteMessage(ctx.message_id);
         ctx.deleteMessage(sentMsg.message_id);
     }, 30e3); 
 }; 

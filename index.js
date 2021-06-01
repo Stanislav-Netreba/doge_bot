@@ -18,7 +18,6 @@ const rub = config.doge_in_rub;
 
 
 bot.on('message', ctx => {
-    console.log('text')
     let command = ctx.message.text
     if(!command) return;
     cmdList = command.split(/\s+/g);
@@ -37,5 +36,14 @@ bot.on('message', ctx => {
         ctx.reply(new Date())
 
     }
+});
+
+bot.on('callback_query', (query)=>{
+    if(query.update.callback_query.data == 'doge'){
+        doge_price(query, 1, uah, usd, rub);
+    };
+    if(query.update.callback_query.data == 'chart'){
+        chart(query, config.doge_price_chart);
+    };
 });
 bot.launch();

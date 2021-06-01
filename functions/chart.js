@@ -57,7 +57,7 @@ module.exports = async (ctx, chart) =>{
 
         
         let st = setTimeout(() => {
-            ctx.deleteMessage(ctx.message_id);
+            ctx.message_id && ctx.deleteMessage(ctx.message_id);
             ctx.deleteMessage(a.message_id);
         }, 60*1e3);  
         
