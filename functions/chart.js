@@ -5,11 +5,13 @@ const fetch = require("node-fetch");
 
 module.exports = async (ctx, chart) =>{
     
-    const chartJSNodeCanvas = new ChartJSNodeCanvas({ width: 1400, height: 700 });
+    const chartJSNodeCanvas = new ChartJSNodeCanvas({ width: 1000, height: 500 });
 
     function ut (timestamp) {
         let d = new Date(timestamp);
-        timeStampCon = d.getHours() + ':' + d.getMinutes();
+        let hours = d.getHours() 
+        let minutes = d.getMinutes();
+        let timeStampCon = (hours<=9 ? `0${hours}` : `${hours}`) + ':' + (minutes<=9 ? `0${minutes}` : `${minutes}`)
         return timeStampCon;
     };
 
@@ -36,13 +38,12 @@ module.exports = async (ctx, chart) =>{
                     datasets: [{
                         label: 'Doge price',
                         data: prices,
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 256)'
-                        ],
+                        pointBorderColor: 'transparent',
+                        pointBackgroundColor: 'transparent',
                         borderColor: [
                             'rgba(255,99,132,256)'
                         ],
-                        borderWidth: 1
+                        borderWidth: 3
                     }]
                 }
             });
