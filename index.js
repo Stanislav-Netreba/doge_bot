@@ -22,14 +22,14 @@ bot.on('message', ctx => {
     if(!command) return;
     cmdList = command.split(/\s+/g);
 
-    if(cmdList[0].toLowerCase() == 'doge'){
+    if(['doge', '/doge', '/doge@grey_pony_bot'].includes(cmdList[0].toLowerCase())){
         let num = +cmdList[1] || 1;
         doge_price(ctx, num, uah, usd, rub)
     };
-    if(cmdList[0].toLowerCase() == 'help'){
+    if(['help', '/help', '/help@grey_pony_bot'].includes(cmdList[0].toLowerCase())){
         help(bot, ctx);
     };
-    if(cmdList[0].toLowerCase() == 'chart') {
+    if(['chart', '/chart', '/chart@grey_pony_bot'].includes(cmdList[0].toLowerCase())) {
         chart(ctx, config.doge_price_chart);
     };
     if(ctx.message.text == 'time'){
